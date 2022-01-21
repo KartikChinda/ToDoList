@@ -7,7 +7,9 @@ var items = [];
 
 const mongoose = require('mongoose');
 
-mongoose.connect("mongodb+srv://kartik11:1517sec4@cluster0.zkeb3.mongodb.net/toDoListDb", { useNewUrlParser: true });
+
+
+mongoose.connect(process.env.MONGOURL, { useNewUrlParser: true });
 
 const itemsSchema = {
     name: String
